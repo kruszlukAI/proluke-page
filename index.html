@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ProLuke – Oczyszczanie wody i ścieków, biogaz, surowce chemiczne i AI
+    </title>
+    <meta
+      name="description"
+      content="ProLuke: doradztwo inżynieryjne, optymalizacja procesów oczyszczania wody i ścieków, produkty do oczyszczania biogazu, surowce chemiczne i usługi AI dla firm."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO: Canonical & Hreflang -->
+    <link rel="canonical" href="https://proluke.com/" />
+    <link rel="alternate" hreflang="pl" href="https://proluke.com/" />
+    <link rel="alternate" hreflang="en" href="https://proluke.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://proluke.com/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://proluke.com/" />
+    <meta
+      property="og:title"
+      content="ProLuke – Oczyszczanie wody i ścieków, biogaz, surowce chemiczne i AI"
+    />
+    <meta
+      property="og:description"
+      content="ProLuke: doradztwo inżynieryjne, optymalizacja procesów oczyszczania wody i ścieków, produkty do oczyszczania biogazu, surowce chemiczne i usługi AI dla firm."
+    />
+
+    <!-- Czcionka Google: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon (Oryginalny ProLuke PL) -->
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg" sizes="192x192" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="images/favicon.jpg" />
+
+    <!-- Arkusz stylów -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Dane strukturalne Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PROLUKE Łukasz Kruszyński",
+        "url": "https://proluke.com/",
+        "taxID": "8511868264",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Wiosenna 30",
+          "postalCode": "72-004",
+          "addressLocality": "Tanowo",
+          "addressCountry": "PL"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ======================= NAWIGACJA I LOGO ======================= -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="#top" class="brand" aria-label="ProLuke – Strona główna">
+          <!-- Logo ProLuke – Stempel Inżynieryjny PL (Wariant C z wizualizacja.html) -->
+          <svg
+            class="brand-svg"
+            viewBox="0 0 64 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Logo ProLuke – Stempel Inżynieryjny"
+          >
+            <rect
+              x="4"
+              y="6"
+              width="56"
+              height="52"
+              rx="6"
+              fill="#262629"
+              stroke="#52525B"
+              stroke-width="2"
+            />
+            <path
+              d="M4 12C4 8.68629 6.68629 6 10 6H12V32H4V12Z"
+              fill="#1E88E5"
+            />
+            <path
+              d="M4 32H12V58H10C6.68629 58 4 55.3137 4 52V32Z"
+              fill="#76B82A"
+            />
+            <path
+              d="M19 18H31C36.5 18 40 21.5 40 26.8C40 32.1 36.5 35.6 31 35.6H25.5V46H19V18ZM25.5 23.6V30H30.2C32.7 30 34 28.8 34 26.8C34 24.8 32.7 23.6 30.2 23.6H25.5Z"
+              fill="#F5F5F4"
+            />
+            <path d="M38 18H44.5V40.2H53V46H38V18Z" fill="#76B82A" />
+          </svg>
+          <div>
+            <span class="logo-text">Pro<span class="luke">Luke</span></span>
+            <span class="logo-tagline">Woda • Biogaz • Surowce • AI</span>
+          </div>
+        </a>
+
+        <nav aria-label="Główne menu">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#przemysl">Przemysł</a></li>
+            <li>
+              <a
+                href="#proluke-ai"
+                class="nav-ai-btn"
+                aria-label="ProLuke AI"
+              >
+                <img
+                  src="images/plAIlogo.png"
+                  alt="ProLuke AI"
+                  class="nav-ai-logo"
+                  width="115"
+                  height="22"
+                />
+              </a>
+            </li>
+            <li><a href="#jak-pracujemy">Jak pracujemy?</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Wybór języka">
+            <a href="index.html" class="lang-btn active" aria-current="page"
+              >PL</a
+            >
+            <a href="en/index.html" class="lang-btn" hreflang="en">EN</a>
+          </div>
+          <button
+            class="mobile-toggle"
+            id="mobileToggle"
+            aria-label="Otwórz menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================= HERO SLIDER ======================= -->
+    <section
+      class="hero-slider"
+      id="top"
+      aria-label="Prezentacja głównych obszarów działalności"
+    >
+      <!-- Slajd 1: Woda i ścieki -->
+      <div
+        class="slide active"
+        style="background-image: url(&quot;images/slider-woda.webp&quot;)"
+      >
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-badge blue">Woda i ścieki</span>
+            <h1 class="slide-title">
+              Projektowanie i optymalizacja procesów oczyszczania
+            </h1>
+            <p class="slide-desc">
+              Wspieramy zakłady w analizie problemów technologicznych,
+              projektowaniu linii procesowych oraz doborze rozwiązań dla
+              oczyszczania wody i ścieków.
+            </p>
+            <div class="slide-actions">
+              <a href="#przemysl" class="btn btn-primary btn-blue"
+                >Poznaj rozwiązania dla przemysłu</a
+              >
+              <a href="#kontakt" class="btn btn-outline btn-outline-blue"
+                >Omów problem technologiczny</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slajd 2: Uzdatnianie Biogazu -->
+      <div
+        class="slide"
+        style="background-image: url(&quot;images/slider-biogaz.webp&quot;)"
+      >
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-badge">Uzdatnianie biogazu</span>
+            <h2 class="slide-title">
+              Produkty do oczyszczania biogazu i usuwania
+              <span class="chemical-formula">H<sub>2</sub>S</span>
+            </h2>
+            <p class="slide-desc">
+              Oferujemy produkty do oczyszczania biogazu, ze szczególnym
+              uwzględnieniem usuwania siarkowodoru. Pomagamy dobrać rozwiązanie
+              do parametrów gazu i warunków pracy instalacji.
+            </p>
+            <div class="slide-actions">
+              <a href="#przemysl" class="btn btn-primary">Poznaj ofertę</a>
+              <a href="#kontakt" class="btn btn-outline">Zapytaj o produkt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slajd 3: ProLuke AI -->
+      <div
+        class="slide"
+        style="background-image: url(&quot;images/slider-ai.webp&quot;)"
+      >
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-badge blue">ProLuke AI</span>
+            <h2 class="slide-title">
+              Znajdź praktyczne zastosowania AI w swojej firmie
+            </h2>
+            <p class="slide-desc">
+              Prowadzimy szkolenia i konsultacje, które pomagają rozpoznać
+              procesy oraz zadania, w których narzędzia sztucznej inteligencji
+              mogą wspierać pracowników i usprawniać pracę firmy.
+            </p>
+            <div class="slide-actions">
+              <a href="#proluke-ai" class="btn btn-primary btn-blue"
+                >Poznaj ProLuke AI</a
+              >
+              <a href="#kontakt" class="btn btn-outline btn-outline-blue"
+                >Porozmawiajmy o AI</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kontrolki slidera -->
+      <div class="slider-controls">
+        <div class="container slider-controls-inner">
+          <div class="slider-dots" role="tablist" aria-label="Wybór slajdu">
+            <button
+              class="dot active"
+              data-slide="0"
+              aria-label="Slajd 1"
+            ></button>
+            <button class="dot" data-slide="1" aria-label="Slajd 2"></button>
+            <button class="dot" data-slide="2" aria-label="Slajd 3"></button>
+          </div>
+          <div class="slider-arrows">
+            <button
+              class="arrow-btn"
+              id="prevSlideBtn"
+              aria-label="Poprzedni slajd"
+            >
+              ←
+            </button>
+            <button
+              class="arrow-btn"
+              id="nextSlideBtn"
+              aria-label="Następny slajd"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SEKCJA 1 (JASNA): O NAS ======================= -->
+    <section class="section theme-light" id="o-nas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-blue">Jak wspieramy firmy</span>
+          <h2 class="section-title">
+            Rozwiązania dopasowane do realnych potrzeb
+          </h2>
+          <p class="section-subtitle">
+            Łączymy wiedzę technologiczną, doradztwo i dobór produktów.
+            Zaczynamy od zrozumienia problemu, a następnie analizujemy możliwe
+            kierunki działania.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">01</div>
+            <h3>Zrozumienie procesu</h3>
+            <p>
+              Poznajemy wymagania, ograniczenia i oczekiwany efekt, zamiast
+              zakładać z góry jedno rozwiązanie.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">02</div>
+            <h3>Doradztwo inżynieryjne</h3>
+            <p>
+              Wspieramy analizę procesów, projektowanie rozwiązań i poszukiwanie
+              możliwości optymalizacji.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">03</div>
+            <h3>Dobór surowców i produktów</h3>
+            <p>
+              Oferujemy specjalistyczne surowce chemiczne i produkty procesowe,
+              a także poszukujemy innych rozwiązań zgodnie z aktualnymi
+              potrzebami klientów.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">04</div>
+            <h3>Praktyczne podejście do AI</h3>
+            <p>
+              Pomagamy rozpoznawać zadania i procesy, w których sztuczna
+              inteligencja może być przydatna, oraz ocenić możliwe kierunki jej
+              wykorzystania.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SEKCJA 2 (CIEMNA): PRZEMYSŁ ======================= -->
+    <section class="section theme-dark-alt" id="przemysl">
+      <a id="oferta" style="position: absolute; top: -80px; visibility: hidden;"></a>
+      <div class="container" id="biogaz">
+        <div class="section-header">
+          <span class="section-tag">Inżynieria i technologia</span>
+          <h2 class="section-title">Rozwiązania dla przemysłu</h2>
+          <p class="section-subtitle">
+            Łączymy wsparcie inżynieryjne, dobór specjalistycznych produktów i
+            poszukiwanie rozwiązań dopasowanych do wymagań konkretnego procesu.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Karta 1: Woda i ścieki -->
+          <article class="service-box blue-accent">
+            <div>
+              <div class="service-header">
+                <span class="service-num">01</span>
+                <span class="section-tag no-margin tag-blue"
+                  >Woda i ścieki</span
+                >
+              </div>
+              <h3>Oczyszczanie wody i ścieków</h3>
+              <p>
+                Wspieramy firmy w analizie i optymalizacji technologii
+                oczyszczania oraz projektowaniu linii procesowych do produkcji koagulantów.
+              </p>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <span class="spec-dot"></span
+                ><span
+                  >Consulting inżynieryjny i analiza problemów
+                  technologicznych</span
+                >
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Projektowanie linii procesowych</span>
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Optymalizacja procesów technologicznych</span>
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Surowce do produkcji koagulantów</span>
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Specjalistyczne urządzenia do procesów utleniania</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Karta 2: Uzdatnianie biogazu -->
+          <article class="service-box service-box-biogaz">
+            <div>
+              <div class="service-header">
+                <span class="service-num">02</span>
+                <span class="section-tag no-margin">Biogaz</span>
+              </div>
+              <h3>Uzdatnianie biogazu</h3>
+              <p>
+                Oferujemy produkty do oczyszczania biogazu, w szczególności do
+                usuwania siarkowodoru (<span class="chemical-formula"
+                  >H<sub>2</sub>S</span
+                >). Dobór produktu powinien uwzględniać parametry gazu i warunki
+                pracy instalacji.
+              </p>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <span class="spec-dot"></span
+                ><span>Produkty do oczyszczania biogazu</span>
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span
+                  >Rozwiązania do usuwania siarkowodoru (<span
+                    class="chemical-formula"
+                    >H<sub>2</sub>S</span
+                  >)</span
+                >
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Dobór produktu do parametrów procesu</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Karta 3: Surowce chemiczne -->
+          <article class="service-box blue-accent">
+            <div>
+              <div class="service-header">
+                <span class="service-num">03</span>
+                <span class="section-tag no-margin tag-blue">Surowce</span>
+              </div>
+              <h3>Surowce chemiczne</h3>
+              <p>
+                Oferujemy surowce chemiczne, w szczególności produkty z
+                portfolio Alufluor AB. Na zapytanie poszukujemy również innych
+                produktów zgodnych ze specyfikacją i aktualnymi potrzebami
+                klienta.
+              </p>
+            </div>
+            <ul class="spec-list">
+              <li>
+                <span class="spec-dot"></span
+                ><span>Produkty z portfolio Alufluor AB</span>
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Specjalistyczne surowce chemiczne dla przemysłu</span>
+              </li>
+              <li>
+                <span class="spec-dot"></span
+                ><span>Poszukiwanie produktów na indywidualne zapytanie</span>
+              </li>
+            </ul>
+            <div style="margin-top: 24px;">
+              <a
+                href="#surowce"
+                class="btn btn-outline btn-outline-blue btn-full btn-sm"
+                >Poznaj oferowane surowce ↓</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= NOWA SEKCJA: SUROWCE CHEMICZNE (TŁO FULL-WIDTH) ======================= -->
+    <section
+      class="section-chemicals"
+      id="surowce"
+      aria-label="Specjalistyczne surowce chemiczne"
+    >
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-blue">Portfolio surowcowe</span>
+          <h2 class="section-title">Specjalistyczne surowce chemiczne</h2>
+          <p class="section-subtitle">
+            Dostarczamy certyfikowane nieorganiczne surowce mineralne i
+            chemiczne o powtarzalnych parametrach jakościowych, ze szczególnym
+            uwzględnieniem produktów z portfolio szwedzkiego producenta Alufluor AB.
+          </p>
+        </div>
+
+        <div class="chemicals-grid">
+          <!-- Produkt 1: Suszony wodorotlenek glinu -->
+          <article class="chemical-card">
+            <div class="chem-top">
+              <div class="chem-header">
+                <span class="chem-formula">Al(OH)<sub>3</sub></span>
+                <h4>Suszony wodorotlenek glinu</h4>
+              </div>
+              <p class="chem-desc">
+                Wysokiej czystości suszony wodorotlenek glinu o stabilnym
+                uziarnieniu i niskiej wilgotności. Kluczowy surowiec do syntezy
+                chemicznej oraz bezhalogenowy mineralny uniepalniacz (ATH).
+              </p>
+              <ul class="chem-specs">
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Produkcja koagulantów do uzdatniania wody i ścieków (PAC,
+                    siarczan glinu)</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Ekologiczny antypiren do tworzyw sztucznych, gumy i
+                    kabli</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Wytwarzanie szkła technicznego, ceramiki i zeolitów</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="chem-footer">
+              <a href="#kontakt" class="chem-action-link"
+                >Zapytaj o specyfikację <span>→</span></a
+              >
+            </div>
+          </article>
+
+          <!-- Produkt 2: Ditlenek krzemu -->
+          <article class="chemical-card">
+            <div class="chem-top">
+              <div class="chem-header">
+                <span class="chem-formula">SiO<sub>2</sub></span>
+                <h4>Ditlenek krzemu (krzemionka)</h4>
+              </div>
+              <p class="chem-desc">
+                Syntetyczny ditlenek krzemu o wysokiej dyspersji, rozwiniętej
+                powierzchni właściwej i kontrolowanej czystości. Doskonały
+                nośnik funkcjonalny i modyfikator reologii.
+              </p>
+              <ul class="chem-specs">
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Środek przeciwzbrylający i nośnik w chemii technicznej i
+                    paszowej</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Wypełniacz wzmacniający w przetwórstwie elastomerów i
+                    polimerów</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Regulator lepkości w farbach, powłokach, klejach i
+                    masach</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="chem-footer">
+              <a href="#kontakt" class="chem-action-link"
+                >Zapytaj o specyfikację <span>→</span></a
+              >
+            </div>
+          </article>
+
+          <!-- Produkt 3: Fluorek glinu -->
+          <article class="chemical-card">
+            <div class="chem-top">
+              <div class="chem-header">
+                <span class="chem-formula">AlF<sub>3</sub></span>
+                <h4>Fluorek glinu</h4>
+              </div>
+              <p class="chem-desc">
+                Bezwodny fluorek glinu o najwyższym stopniu czystości chemicznej
+                z portfolio Alufluor AB. Niezbędny składnik obniżający
+                temperaturę topnienia i zużycie energii w hutnictwie.
+              </p>
+              <ul class="chem-specs">
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Regulacja kąpieli elektrolitycznych w hutnictwie pierwotnym
+                    aluminium</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Produkcja specjalistycznych szkieł optycznych i ceramiki
+                    technicznej</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Topnik w metalurgii metali nieżelaznych i procesach
+                    lutowania</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="chem-footer">
+              <a href="#kontakt" class="chem-action-link"
+                >Zapytaj o specyfikację <span>→</span></a
+              >
+            </div>
+          </article>
+
+          <!-- Produkt 4: Fluorek wapnia -->
+          <article class="chemical-card">
+            <div class="chem-top">
+              <div class="chem-header">
+                <span class="chem-formula">CaF<sub>2</sub></span>
+                <h4>Fluorek wapnia (fluoryt)</h4>
+              </div>
+              <p class="chem-desc">
+                Syntetyczny fluorek wapnia o jednorodnym składzie mineralnym i
+                minimalnej zawartości zanieczyszczeń. Czysta i powtarzalna
+                alternatywa dla fluorytu naturalnego.
+              </p>
+              <ul class="chem-specs">
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Topnik żużlotwórczy w procesach hutnictwa stali, żeliwa i
+                    odlewnictwa</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Wytwarzanie otulin elektrod spawalniczych i topników
+                    spawalniczych</span
+                  >
+                </li>
+                <li>
+                  <span class="chem-dot"></span>
+                  <span
+                    >Przemysł szklarski, ceramika szlachetna i produkcja
+                    emalii</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="chem-footer">
+              <a href="#kontakt" class="chem-action-link"
+                >Zapytaj o specyfikację <span>→</span></a
+              >
+            </div>
+          </article>
+        </div>
+
+        <div class="chem-bottom-cta">
+          <div>
+            <h4 style="margin-bottom: 4px; color: #ffffff;">
+              Szukasz surowca o specyficznych parametrach lub próbek do badań?
+            </h4>
+            <p style="color: var(--text-muted-dark); font-size: 0.95rem;">
+              Pomagamy w doborze frakcji, dostarczamy karty charakterystyki
+              (MSDS/TDS) i poszukujemy surowców pod dedykowane procesy
+              technologiczne.
+            </p>
+          </div>
+          <a
+            href="#kontakt"
+            class="btn btn-primary btn-blue"
+            style="white-space: nowrap;"
+            >Zapytaj o surowce</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SEKCJA 3 (JASNA): PROLUKE AI I PROCES ======================= -->
+    <section class="section theme-light" id="proluke-ai">
+      <div class="container">
+        <div class="eco-banner">
+          <div>
+            <a href="#proluke-ai" class="eco-ai-btn" aria-label="ProLuke AI">
+              <img
+                src="images/plAIlogo.png"
+                alt="ProLuke AI"
+                class="eco-ai-logo"
+                width="146"
+                height="28"
+              />
+            </a>
+            <h3>AI w firmie: zacznijmy od problemu, nie od narzędzia</h3>
+            <p>
+              Prowadzimy konsultacje i szkolenia pomagające firmom rozpoznać
+              procesy oraz zadania, w których sztuczna inteligencja może znaleźć
+              praktyczne zastosowanie. Pomagamy ocenić potencjalne korzyści,
+              ograniczenia i możliwe kolejne kroki.
+            </p>
+          </div>
+          <div class="eco-banner-cta">
+            <a href="#kontakt" class="btn btn-primary btn-blue"
+              >Porozmawiajmy o AI</a
+            >
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title" id="jak-pracujemy">Jak pracujemy?</h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="step-item">
+            <span class="step-badge">KROK 01</span>
+            <h4 class="step-title">Rozpoznanie problemu</h4>
+            <p class="step-desc">
+              Poznajemy proces, zadania, wymagania i ograniczenia, które należy
+              uwzględnić przy poszukiwaniu rozwiązania.
+            </p>
+          </div>
+          <div class="step-item">
+            <span class="step-badge">KROK 02</span>
+            <h4 class="step-title">Analiza możliwych rozwiązań</h4>
+            <p class="step-desc">
+              Rozważamy dostępne kierunki działania — technologię, produkt lub
+              narzędzie — pod kątem ich dopasowania do potrzeb klienta.
+            </p>
+          </div>
+          <div class="step-item">
+            <span class="step-badge">KROK 03</span>
+            <h4 class="step-title">Rekomendacja dalszych działań</h4>
+            <p class="step-desc">
+              Ustalamy możliwy zakres współpracy, który może obejmować dostawę
+              produktu, doradztwo inżynieryjne, optymalizację procesu lub dalszą
+              analizę zastosowania AI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SEKCJA 4 (CIEMNA): KONTAKT ======================= -->
+    <section class="section theme-dark" id="kontakt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Kontakt</span>
+          <h2 class="section-title">Porozmawiajmy o Twoim projekcie</h2>
+          <p class="section-subtitle">
+            Szukasz rozwiązania problemu technologicznego, produktu do
+            oczyszczania biogazu, specjalistycznego surowca chemicznego lub
+            możliwości wykorzystania AI w firmie? Opisz swoje potrzeby, a
+            ustalimy możliwy zakres współpracy.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <div class="contact-item">
+              <div class="contact-label">Dane firmy</div>
+              <div class="contact-value">PROLUKE Łukasz Kruszyński</div>
+              <div class="contact-sub">NIP: 8511868264</div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Adres siedziby</div>
+              <div class="contact-value">ul. Wiosenna 30</div>
+              <div class="contact-sub">
+                72-004 Tanowo, Polska (woj. zachodniopomorskie)
+              </div>
+            </div>
+
+            <div class="contact-item no-margin-bottom">
+              <div class="contact-label">Szybki kontakt</div>
+              <div
+                class="contact-sub"
+                style="margin-bottom: 16px; line-height: 1.5"
+              >
+                Preferujesz kontakt telefoniczny? Skorzystaj z opcji zamówienia
+                rozmowy, a oddzwonimy pod wskazany numer.
+              </div>
+              <button
+                type="button"
+                id="requestCallBtn"
+                class="btn btn-secondary"
+                style="width: 100%"
+              >
+                Poproś o kontakt telefoniczny
+              </button>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            id="contactForm"
+            data-lang="pl"
+            method="POST"
+            action="api/contact.php"
+          >
+            <!-- Honeypot (ukryte pole przeciwko robotom spamującym) -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website_url">Zostaw to pole puste</label>
+              <input
+                type="text"
+                id="website_url"
+                name="website_url"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name"
+                  >Imię i nazwisko <span class="required-mark">*</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                  maxlength="100"
+                  placeholder="np. Jan Kowalski"
+                />
+              </div>
+              <div class="form-group">
+                <label for="company"
+                  >Firma <span class="contact-sub">(opcjonalnie)</span></label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-control"
+                  maxlength="120"
+                  placeholder="Nazwa przedsiębiorstwa"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email"
+                >Adres e-mail <span class="required-mark">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+                maxlength="255"
+                placeholder="kontakt@twojafirma.pl"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="topic"
+                >Obszar zapytania <span class="required-mark">*</span></label
+              >
+              <select id="topic" name="topic" class="form-control" required>
+                <option value="woda">Oczyszczanie wody i ścieków</option>
+                <option value="biogaz">
+                  Uzdatnianie biogazu – usuwanie H₂S
+                </option>
+                <option value="surowce">Surowce chemiczne</option>
+                <option value="ai">ProLuke AI – konsultacje i szkolenia</option>
+                <option value="inne">Inne zapytanie</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-group-title"
+                >Preferowany sposób kontaktu</label
+              >
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="preferred_contact"
+                    value="email"
+                    id="prefEmail"
+                    checked
+                  />
+                  <span>E-mail</span>
+                </label>
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="preferred_contact"
+                    value="phone"
+                    id="prefPhone"
+                  />
+                  <span>Telefon</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group" id="phoneGroup" style="display: none">
+              <label for="phone"
+                >Numer telefonu <span class="required-mark">*</span></label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-control"
+                maxlength="30"
+                placeholder="+48 000 000 000"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message"
+                >Treść wiadomości <span class="required-mark">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="form-control"
+                required
+                maxlength="5000"
+                placeholder="Opisz krótko zapotrzebowanie, parametry procesu lub zakres konsultacji..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="submitBtn"
+              class="btn btn-primary btn-full"
+            >
+              Wyślij zapytanie
+            </button>
+
+            <p class="privacy-note">
+              Wysyłając formularz, wyrażasz zgodę na kontakt w sprawie Twojego
+              zapytania. Dane przetwarzane są wyłącznie w celach obsługi
+              korespondencji.
+            </p>
+
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= STOPKA ======================= -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          &copy; <span id="year"></span> PROLUKE Łukasz Kruszyński. Wszelkie
+          prawa zastrzeżone.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Przycisk przewijania do góry strony -->
+    <button
+      type="button"
+      id="scrollTopBtn"
+      class="scroll-top-btn"
+      aria-label="Przewiń do góry strony"
+      title="Przewiń do góry strony"
+    >
+      <svg
+        class="scroll-top-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="square"
+        stroke-linejoin="miter"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <!-- Skrypt główny -->
+    <script src="app.js"></script>
+  </body>
+</html>

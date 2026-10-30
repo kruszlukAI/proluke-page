@@ -1,0 +1,1259 @@
+/* ==========================================================================
+   PROLUKE.COM – FLAT DESIGN ONEPAGER STYLESHEET
+   Przeznaczenie: Edycja w Antigravity IDE (wspólny arkusz dla PL i EN)
+   ========================================================================== */
+
+:root {
+  /* Tła ciemne – Prawdziwy Grafit (bez granatowej poświaty) */
+  --bg-dark-primary: #18181b;
+  --bg-dark-secondary: #232326;
+  --bg-dark-card: #2c2c30;
+
+  /* Tła jasne – Ciepła kamienna biel */
+  --bg-light-primary: #f5f5f4;
+  --bg-light-card: #ffffff;
+
+  /* Typografia */
+  --text-on-dark: #f4f4f5;
+  --text-muted-dark: #a1a1aa;
+  --text-on-light: #18181b;
+  --text-muted-light: #52525b;
+
+  /* Akcenty ProLuke: Ciepła Zieleń (Biogaz/Eko) + Błękit ProLuke (Woda/Chemia) */
+  --accent-green: #76b82a;
+  --accent-green-hover: #5f9620;
+  --accent-blue: #1e88e5;
+  --accent-blue-hover: #1565c0;
+
+  /* Obramowania i układ */
+  --border-dark: #3f3f46;
+  --border-light: #e4e4e7;
+  --container-width: 1200px;
+  --transition: 0.25s ease;
+  --font-main: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Reset i baza */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: var(--text-on-light);
+  background-color: var(--bg-light-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.logo-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 12px;
+  background-color: rgba(118, 184, 42, 0.15);
+  color: var(--accent-green);
+  margin-bottom: 16px;
+  border-left: 3px solid var(--accent-green);
+}
+
+.section-tag.no-margin {
+  margin-bottom: 0;
+}
+
+.section-tag.tag-blue {
+  background-color: rgba(30, 136, 229, 0.12);
+  color: var(--accent-blue);
+  border-left-color: var(--accent-blue);
+}
+
+.theme-dark .section-tag.tag-blue,
+.theme-dark-alt .section-tag.tag-blue,
+.eco-banner .section-tag.tag-blue {
+  background-color: rgba(30, 136, 229, 0.16);
+  color: #42a5f5;
+  border-left-color: var(--accent-blue);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+}
+
+/* Formatowanie wzorów chemicznych (np. H₂S) */
+.chemical-formula {
+  font-family: inherit;
+  font-weight: inherit;
+  white-space: nowrap;
+}
+
+.chemical-formula sub {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 0.62em;
+  line-height: 0;
+  vertical-align: -0.22em;
+}
+
+/* ==========================================================================
+   MOTYWY SEKCJI (CIEMNE / JASNE)
+   ========================================================================== */
+.theme-dark {
+  background-color: var(--bg-dark-primary);
+  color: var(--text-on-dark);
+}
+
+.theme-dark .section-subtitle {
+  color: var(--text-muted-dark);
+}
+
+.theme-dark-alt {
+  background-color: var(--bg-dark-secondary);
+  color: var(--text-on-dark);
+}
+
+.theme-dark-alt .section-subtitle {
+  color: var(--text-muted-dark);
+}
+
+.theme-light {
+  background-color: var(--bg-light-primary);
+  color: var(--text-on-light);
+}
+
+.theme-light .section-subtitle {
+  color: var(--text-muted-light);
+}
+
+/* ==========================================================================
+   NAWIGACJA I LOGO SVG
+   ========================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-dark-primary);
+  border-bottom: 1px solid var(--border-dark);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-svg {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.brand:hover .brand-svg {
+  transform: scale(1.03);
+}
+
+.logo-text {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.logo-text span,
+.logo-text .luke {
+  color: var(--accent-green);
+}
+
+.logo-tagline {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted-dark);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--text-on-dark);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent-green);
+}
+
+.nav-links a.nav-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(4px);
+}
+
+.nav-links a.nav-ai-btn:hover {
+  color: inherit;
+  opacity: 1;
+}
+
+.nav-ai-logo {
+  height: 22px;
+  width: auto;
+  display: block;
+  transition: filter var(--transition);
+}
+
+.nav-links a.nav-ai-btn:hover .nav-ai-logo {
+  filter: grayscale(1) brightness(2.5) contrast(1.5);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--border-dark);
+  background-color: var(--bg-dark-secondary);
+}
+
+.lang-btn {
+  color: var(--text-muted-dark);
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.active {
+  background-color: var(--accent-green);
+  color: var(--bg-dark-primary);
+}
+
+/* Przyciski (Flat Buttons) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--accent-green);
+  color: var(--bg-dark-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-green-hover);
+  color: #ffffff;
+}
+
+.btn-blue,
+.btn-primary.btn-blue {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+.btn-blue:hover,
+.btn-primary.btn-blue:hover {
+  background-color: var(--accent-blue-hover);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-dark);
+  color: var(--text-on-dark);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+.btn-outline.btn-outline-blue:hover,
+.btn-outline-blue:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-dark);
+  color: var(--text-on-dark);
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SLIDER
+   ========================================================================== */
+.hero-slider {
+  position: relative;
+  background-color: var(--bg-dark-primary);
+  height: 620px;
+  overflow: hidden;
+  border-bottom: 4px solid var(--accent-green);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 24, 27, 0.7);
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+  color: var(--text-on-dark);
+}
+
+.slide-badge {
+  display: inline-block;
+  background-color: var(--accent-green);
+  color: var(--bg-dark-primary);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+}
+
+.slide-badge.blue {
+  background-color: var(--accent-blue);
+}
+
+.slide-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.slide-desc {
+  font-size: 1.15rem;
+  color: var(--text-muted-dark);
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+
+.slide-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.slider-controls-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 36px;
+  height: 6px;
+  background-color: var(--border-dark);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dot.active {
+  background-color: var(--accent-green);
+  width: 56px;
+}
+
+.slider-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.arrow-btn {
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-dark-secondary);
+  border: 1px solid var(--border-dark);
+  color: var(--text-on-dark);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.arrow-btn:hover {
+  background-color: var(--accent-green);
+  color: var(--bg-dark-primary);
+  border-color: var(--accent-green);
+}
+
+/* ==========================================================================
+   SEKCJA 1: O NAS (4 FILARY)
+   ========================================================================== */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.pillar-card {
+  background-color: var(--bg-light-card);
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--accent-green);
+  padding: 32px 28px;
+  transition: var(--transition);
+}
+
+.pillar-card:nth-child(even) {
+  border-top-color: var(--accent-blue);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-dark-primary);
+  color: var(--accent-green);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pillar-card:nth-child(even) .pillar-icon {
+  color: #42a5f5;
+}
+
+.pillar-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.pillar-card p {
+  color: var(--text-muted-light);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   SEKCJA 2: OFERTA (BIOGAZ, CHEMIA, INŻYNIERIA)
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.service-box {
+  background-color: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.service-num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-green);
+}
+
+.service-box.blue-accent .service-num {
+  color: var(--accent-blue);
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.service-box p {
+  color: var(--text-muted-dark);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.spec-list {
+  border-top: 1px solid var(--border-dark);
+  padding-top: 20px;
+}
+
+.spec-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: var(--text-on-dark);
+  font-weight: 500;
+}
+
+.spec-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+.service-box.blue-accent .spec-dot {
+  background-color: var(--accent-blue);
+}
+
+.service-box.service-box-biogaz .spec-list {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* ==========================================================================
+   SEKCJA: SUROWCE CHEMICZNE (PEŁNA SZEROKOŚĆ Z CIEMNYM TŁEM PRZEMYSŁOWYM)
+   ========================================================================== */
+.section-chemicals {
+  position: relative;
+  background-image: url("images/section-chemicals.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 96px 0;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 3px solid var(--accent-green);
+  color: var(--text-on-dark);
+}
+
+.section-chemicals::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 27, 0.65) 0%,
+    rgba(24, 24, 27, 0.52) 50%,
+    rgba(24, 24, 27, 0.68) 100%
+  );
+  z-index: 1;
+}
+
+.section-chemicals .container {
+  position: relative;
+  z-index: 2;
+}
+
+.chemicals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.chemical-card {
+  background: rgba(30, 30, 33, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(63, 63, 70, 0.85);
+  border-top: 3px solid var(--accent-green);
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    background-color var(--transition);
+}
+
+.chemical-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-green);
+  background: rgba(38, 38, 42, 0.95);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.chem-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.chem-header {
+  margin-bottom: 12px;
+}
+
+.chem-formula {
+  display: inline-block;
+  background-color: rgba(30, 136, 229, 0.18);
+  color: #42a5f5;
+  border-left: 3px solid var(--accent-blue);
+  padding: 4px 10px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.chemical-card h4 {
+  color: var(--text-on-dark);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.chem-desc {
+  color: #d4d4d8;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.chem-specs {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 0;
+  border-top: 1px solid rgba(63, 63, 70, 0.6);
+  padding-top: 14px;
+}
+
+.chem-specs li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted-dark);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.chem-specs li:last-child {
+  margin-bottom: 0;
+}
+
+.chem-specs .chem-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-green);
+  flex-shrink: 0;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.chem-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(63, 63, 70, 0.4);
+}
+
+.chem-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  text-decoration: none;
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.chem-action-link:hover {
+  color: #9fe647;
+  transform: translateX(4px);
+}
+
+.chem-bottom-cta {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(24, 24, 27, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(63, 63, 70, 0.8);
+  border-left: 4px solid var(--accent-green);
+  padding: 22px 28px;
+  gap: 24px;
+}
+
+.chem-bottom-cta h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.chem-bottom-cta p {
+  line-height: 1.5;
+}
+
+@media (max-width: 1080px) {
+  .chemicals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chem-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .chem-bottom-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .chemicals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SEKCJA 3: EKOLOGIA I PROCES WSPÓŁPRACY
+   ========================================================================== */
+.eco-banner {
+  background-color: var(--bg-dark-primary);
+  color: var(--text-on-dark);
+  padding: 48px;
+  border-left: 6px solid var(--accent-green);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.eco-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.eco-ai-btn:hover {
+  color: inherit;
+  opacity: 1;
+}
+
+.eco-ai-btn:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+.eco-ai-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  transition: filter var(--transition);
+}
+
+.eco-ai-btn:hover .eco-ai-logo {
+  filter: grayscale(1) brightness(2.5) contrast(1.5);
+}
+
+.eco-banner h3 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+}
+
+.eco-banner p {
+  color: var(--text-muted-dark);
+}
+
+.eco-banner-cta {
+  text-align: right;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.step-item {
+  background-color: var(--bg-light-card);
+  border: 1px solid var(--border-light);
+  padding: 28px;
+}
+
+.step-badge {
+  display: inline-block;
+  background-color: var(--bg-dark-primary);
+  color: #42a5f5;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.step-title {
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+.step-desc {
+  color: var(--text-muted-light);
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   SEKCJA 4: KONTAKT I STOPKA
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+}
+
+.contact-info-card {
+  background-color: var(--bg-dark-secondary);
+  border: 1px solid var(--border-dark);
+  padding: 40px;
+}
+
+.contact-item {
+  margin-bottom: 28px;
+}
+
+.contact-item.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-green);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.contact-sub {
+  color: var(--text-muted-dark);
+  font-size: 0.9rem;
+}
+
+.link-accent {
+  color: var(--accent-green);
+}
+
+.link-accent:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  background-color: var(--bg-dark-secondary);
+  border: 1px solid var(--border-dark);
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-on-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--bg-dark-primary);
+  border: 1px solid var(--border-dark);
+  color: var(--text-on-dark);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-green);
+}
+
+.form-status {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--accent-green);
+  font-weight: 500;
+  min-height: 1.4em;
+}
+
+.form-status.error {
+  color: #f87171;
+}
+
+.form-status.success {
+  color: var(--accent-green);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.radio-group {
+  display: flex;
+  gap: 24px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--text-on-dark);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--accent-green);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.required-mark {
+  color: var(--accent-green);
+  margin-left: 2px;
+}
+
+.privacy-note {
+  font-size: 0.8rem;
+  color: var(--text-muted-dark);
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.privacy-note a {
+  color: var(--accent-green);
+  text-decoration: underline;
+}
+
+.privacy-note a:hover {
+  color: #ffffff;
+}
+
+.turnstile-wrapper {
+  margin: 18px 0;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-secondary {
+  background-color: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  color: var(--text-on-dark);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  background-color: rgba(118, 184, 42, 0.08);
+}
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
+
+footer {
+  background-color: var(--bg-dark-primary);
+  color: var(--text-muted-dark);
+  padding: 32px 0;
+  border-top: 1px solid var(--border-dark);
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   PRZYCISK PRZEWIJANIA DO GÓRY (SCROLL TO TOP)
+   ========================================================================== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-dark-secondary);
+  border: 1px solid var(--border-dark);
+  color: var(--text-on-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  pointer-events: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--accent-green);
+  color: var(--bg-dark-primary);
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(118, 184, 42, 0.35);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-1px);
+}
+
+.scroll-top-btn:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+.scroll-top-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
+}
+
+.scroll-top-btn:hover .scroll-top-icon {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSYWNOŚĆ (RWD)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-dark-primary);
+    flex-direction: column;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .slide-title {
+    font-size: 2.1rem;
+  }
+
+  .eco-banner,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-banner-cta {
+    text-align: left;
+  }
+
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
