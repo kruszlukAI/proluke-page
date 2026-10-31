@@ -992,6 +992,33 @@ ul {
   text-decoration: underline;
 }
 
+.contact-linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-on-dark);
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.contact-linkedin-link:hover {
+  color: var(--accent-green);
+}
+
+.contact-linkedin-link:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 4px;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
 .contact-form {
   background-color: var(--bg-dark-secondary);
   border: 1px solid var(--border-dark);
@@ -1145,6 +1172,33 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.footer-linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted-dark);
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color var(--transition);
+}
+
+.footer-linkedin-link:hover {
+  color: var(--accent-green);
+}
+
+.footer-linkedin-link:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+.footer-linkedin-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
 }
 
 /* ==========================================================================
